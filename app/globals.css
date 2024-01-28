@@ -12,7 +12,29 @@
   .head-text {
     @apply text-heading2-bold text-light-1;
   }
+.animated-nav {
+    background: linear-gradient(to right, #ffffff 0%, #bfbaff 50%, #5b23a3 100%);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 10s infinite;
+  }
 
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0%;
+    }
+    50% {
+      background-position: 100%;
+    }
+    75% {
+      background-position: -100%;
+  
+    } 
+  
+  }
+  
+  
   /* Activity */
   .activity-card {
     @apply flex items-center gap-2 rounded-md bg-dark-2 px-7 py-4;
