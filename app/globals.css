@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,7 +7,7 @@
 @layer components {
   /* main */
   .main-container {
-    @apply flex min-h-screen flex-1 flex-col items-center bg-dark-1 px-6 pb-10 pt-28 max-md:pb-32 sm:px-10;
+    @apply flex min-h-screen flex-1 flex-col items-center bg-slate-400 px-6 pb-10 pt-28 max-md:pb-32 sm:px-10;
   }
 
   /* Head Text */
@@ -13,13 +15,21 @@
     @apply text-heading2-bold text-light-1;
   }
 .animated-nav {
-    background: linear-gradient(to right, #ffffff 0%, #bfbaff 50%, #5b23a3 100%);
+    background: linear-gradient(to right, #ffffff 0%, #8bbed6 50%, #6a7fa1 100%);
     background-size: 200%;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: gradientAnimation 10s infinite;
   }
 
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+
+}
   @keyframes gradientAnimation {
     0% {
       background-position: 0%;
@@ -81,7 +91,7 @@
   }
 
   .topbar {
-    @apply fixed top-0 z-30 flex w-full items-center justify-between bg-dark-2 px-6 py-3;
+    @apply fixed top-0 z-30 flex w-full items-center justify-between bg-slate-900 px-6 py-3;
   }
 
   .bottombar {
@@ -97,7 +107,7 @@
   }
 
   .leftsidebar {
-    @apply sticky left-0 top-0 z-20 flex h-screen w-fit flex-col justify-between overflow-auto border-r border-r-dark-4 bg-dark-2 pb-5 pt-28 max-md:hidden;
+    @apply sticky left-0 top-0 z-20 flex h-screen w-fit flex-col justify-between overflow-auto border-r border-r-dark-4 bg-slate-900 pb-5 pt-28 max-md:hidden;
   }
 
   .leftsidebar_link {

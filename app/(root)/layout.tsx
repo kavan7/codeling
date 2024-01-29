@@ -10,8 +10,8 @@ import Bottombar from "@/components/shared/Bottombar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'TCRI',
-  description : '',
+  title: 'Kavan Codes',
+  description : 'March Break Bootcamp',
   
 }
 
@@ -40,7 +40,7 @@ export default function RootLayout({
 
         </main>
        </body>
-        <Bottombar />
+        
     </html>
     </ClerkProvider>
   );
