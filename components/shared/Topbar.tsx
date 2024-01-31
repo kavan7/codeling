@@ -1,7 +1,9 @@
+
+
 import Link from "next/link";
 import Image from "next/image";
 import { OrganizationSwitcher, SignOutButton, SignedIn } from "@clerk/nextjs";
-import { organizations } from "@clerk/clerk-sdk-node";
+
 
 function Topbar(){
     const isUserLoggedIn = true;
