@@ -17,7 +17,7 @@ function Topbar(){
         </Link>
 
         <div className="flex items-center gap-1">
-            <div className="block md:hidden">
+            <div className="block ">
                 <SignedIn>
                     <SignOutButton>
                         <div className="flex cursor-pointer">
@@ -34,10 +34,11 @@ function Topbar(){
 
             <OrganizationSwitcher 
     appearance={{
+        baseTheme: "dark",
         elements: {
             organizationSwitcherTrigger: "py-2 px-4 text-white"
         },
-        baseTheme: "light"
+      
     }}
 />
         </div>
