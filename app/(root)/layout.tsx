@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: 'Kavan Codes',
-  description : 'March Break Bootcamp',
+  description : 'March Break Coding Bootcamp',
   
 }
 
@@ -23,25 +23,22 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body className={inter.className}>
-        <Topbar/>
+         <html lang='en'>
+        <body className={inter.className}>
+          <Topbar />
 
-        <main>
-          <LeftSidebar/>
+          <main className='flex flex-row'>
+            <LeftSidebar />
+            <section className='main-container'>
+              <div className='w-full max-w-4xl'>{children}</div>
+            </section>
+            {/* @ts-ignore */}
+            
+          </main>
 
-          <section className="main-container">
-              <div className="w-full max-w-4xl">
-                {children}
-              </div>
-          </section>
-
-          <RightSidebar />
-
-        </main>
-       </body>
-        
-    </html>
+          <Bottombar />
+        </body>
+      </html>
     </ClerkProvider>
   );
 }
