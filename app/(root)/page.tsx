@@ -20,6 +20,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
+import Image from "next/image";
 
 
 export default function Home(){
@@ -59,17 +60,21 @@ export default function Home(){
     <h1 className='head-text text-[50px] text-left'><ul>{text}</ul></h1>
     <h1 className=" mt-4 text-primary font-medium lg:text-[25px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">{texttwo}</h1>
     </SignedIn>
+   
     <SignedOut>
+   
     <h1 className='head-text text-[50px] text-left'><ul>2024 March Break Coding Bootcamp</ul></h1>
     <p className="mb-3 pt-5 font-normal text-gray-300 dark:text-gray-400">This course is completely free and beginner friendly </p>
+  
+
     <div
  
 
- className='w-full  p-[3px] rounded-[20px] shadow-card'>
+ className='w-full  p-[3px] roundedy-[20px] '>
 
 
 <div className="">
- 
+
        <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900 py-5"> {`>`} &nbsp; Learn something new during the March Break </h5>
  
 
@@ -127,7 +132,7 @@ export default function Home(){
 
     <div className="p-5">
       
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> > &nbsp; Assignments </h5>
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> {`>`} &nbsp; Assignments </h5>
       
         <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Daily task given after each lesson&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
        
@@ -145,7 +150,7 @@ export default function Home(){
 
     <Button className="mt-5" asChild>
       
-      <Link href="/sign-up" className="w-full "> Sign Up  </Link>
+      <Link href="/sign-up" className="mt-5 w-full "> Sign Up  </Link>
     </Button>
 
 

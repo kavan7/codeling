@@ -25,6 +25,12 @@
   .head-text {
     @apply text-heading2-bold text-light-1;
   }
+  
+
+
+.hero__image {
+  @apply  w-[30%] h-[100px] z-0;
+}
 .animated-nav {
     background: linear-gradient(to right, #ffffff 0%, #8bbed6 50%, #6a7fa1 100%);
     background-size: 200%;
