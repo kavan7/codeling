@@ -86,12 +86,12 @@ export default function Home(){
       <div
  
 
-      className='w-full  p-[3px] rounded-[20px] shadow-card'>
+      className='w-full  h-[200px] p-[3px] rounded-[20px] shadow-card'>
 <div className="max-w-sm bg-black-900 border border-gray-200 rounded-lg shadow dark:bg-white dark:border-gray-700">
 
     <div className="p-5">
       
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> > &nbsp; What will I learn?</h5>
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> {`>`} &nbsp; What will I learn?</h5>
       
         <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Getting started on the fundamentals of python for beginners </p>
        
@@ -99,7 +99,7 @@ export default function Home(){
 </div>
       </div>
     </Tilt>
-    <Tilt className="xs:w-[250px] w-full">
+    <Tilt className="xs:w-[250px]  h-[200px] w-full">
       <div
  
 
@@ -108,9 +108,10 @@ export default function Home(){
 
     <div className="p-5">
       
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> > &nbsp; How will it work? </h5>
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900">  {`>`} &nbsp; How will it work? </h5>
       
-        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Presentation on the Kavan Codes platform </p>
+        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Presentation on the Kavan Codes platform &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
        
     </div>
 </div>
@@ -128,7 +129,7 @@ export default function Home(){
       
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> > &nbsp; Assignments </h5>
       
-        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Daily task given after each lesson</p>
+        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Daily task given after each lesson&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
        
     </div>
 </div>
@@ -144,7 +145,7 @@ export default function Home(){
 
     <Button className="mt-5" asChild>
       
-      <Link href="/sign-up" className="w-full"> Sign Up  </Link>
+      <Link href="/sign-up" className="w-full "> Sign Up  </Link>
     </Button>
 
 
