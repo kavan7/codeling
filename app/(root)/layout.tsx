@@ -6,6 +6,8 @@ import Topbar from "@/components/shared/Topbar";
 import LeftSidebar from "@/components/shared/LeftSidebar";
 import RightSidebar from "@/components/shared/RightSidebar";
 import Bottombar from "@/components/shared/Bottombar";
+import { SignedIn } from "@clerk/nextjs";
+import { SignedOut } from "@clerk/nextjs";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,18 +26,22 @@ export default function RootLayout({
   return (
     <ClerkProvider>
          <html lang='en'>
-        <body className={inter.className}>
+        <body className={`${inter.className} `}>
+    
           <Topbar />
-
-          <main className='flex flex-row'>
+          
+          <main className='flex flex-row bg-hero-pattern'>
+          <SignedIn>
             <LeftSidebar />
-            <section className='main-container'>
+            </SignedIn>
+            <section className='main-container '>
+             
               <div className='w-full max-w-4xl'>{children}</div>
             </section>
             {/* @ts-ignore */}
             
           </main>
-
+        
           <Bottombar />
         </body>
       </html>
