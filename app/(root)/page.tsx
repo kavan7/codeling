@@ -120,7 +120,7 @@ export default function Home(){
     <Tilt className="xs:w-[250px] w-full">
       <div
  
-
+ 
       className='w-full  p-[3px] rounded-[20px] shadow-card'>
 <div className="max-w-sm bg-black-900 border border-gray-200 rounded-lg shadow dark:bg-white dark:border-gray-700">
 
