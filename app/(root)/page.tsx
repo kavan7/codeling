@@ -63,8 +63,8 @@ export default function Home(){
    
     <SignedOut>
    
-    <h1 className='head-text text-[50px] text-left'><ul>2024 March Break Coding Bootcamp</ul></h1>
-    <p className="mb-3 pt-5 font-normal text-gray-300 dark:text-gray-400">This course is completely free and beginner friendly </p>
+    <h1 className='head-text text-[32px] text-left md:text-[50px]'><ul>2024 March Break <br className="md:hidden"/>Coding Bootcamp</ul></h1>
+    <p className="mb-3 pt-5 font-normal text-gray-300 dark:text-gray-400">This course is completely free <br className="md:hidden"/>and beginner friendly </p>
   
 
     <div
@@ -75,7 +75,7 @@ export default function Home(){
 
 <div className="">
 
-       <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900 py-5"> {`>`} &nbsp; Learn something new during the March Break </h5>
+       <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900 py-5"> {`>`} &nbsp; Learn something new <br className="md:hidden"/>during the March Break </h5>
  
 
    <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> {`>`} &nbsp; Will run from March 12-16</h5>
@@ -86,7 +86,7 @@ export default function Home(){
 
               </SignedOut>
      
-        <section className='mt-9 flex flex-row gap-10 '>
+        <section className='mt-9 flex flex-col md:flex-row gap-10 '>
         <Tilt className="xs:w-[250px] w-full">
       <div
  
