@@ -10,6 +10,8 @@ import { MinusIcon, PlusIcon } from "@radix-ui/react-icons"
 import { Bar, BarChart, ResponsiveContainer } from "recharts"
 
 
+
+
 import {
   Drawer,
   DrawerClose,
@@ -20,7 +22,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
-import Image from "next/image";
+
 
 
 export default function Home(){
@@ -57,8 +59,10 @@ export default function Home(){
   return (
     <>
     <SignedIn>
+   
     <h1 className='head-text text-[50px] text-left'><ul>{text}</ul></h1>
-    <h1 className=" mt-4 text-primary font-medium lg:text-[25px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px]">{texttwo}</h1>
+    <h1 className=" mt-4 text-primary font-medium lg:text-[25px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] text-light-1">{texttwo}</h1>
+
     </SignedIn>
    
     <SignedOut>
@@ -87,6 +91,7 @@ export default function Home(){
               </SignedOut>
      
         <section className='mt-9 flex flex-col md:flex-row gap-10 '>
+    <SignedOut>
         <Tilt className="xs:w-[250px] w-full">
       <div
  
@@ -142,7 +147,11 @@ export default function Home(){
       
     </Tilt>
   
-  
+    </SignedOut>
+    <SignedIn>
+    What you need 
+    
+    </SignedIn>
     </section>
 
     <SignedOut>
