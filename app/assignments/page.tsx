@@ -7,34 +7,20 @@ import { SignedOut } from "@clerk/clerk-react";
 import Link from "next/link";
 import * as React from "react"
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-  CardHeaderTwo
-} from "@/components/ui/card"
-
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-
-
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+  } from "@/components/ui/accordion"
+   
 
 export default function Home(){
   const [text, setText] = React.useState("");
-  const [fullText, setFullText] = React.useState("You're in.");
+  const [fullText, setFullText] = React.useState("Assignments");
   const [index, setIndex] = React.useState(0);
 
   const [texttwo, settexttwo] = React.useState("")
-  const [fullTextTwo, setFullTextTwo] = React.useState("Welcome to the March Break coding bootcamp!");
+  const [fullTextTwo, setFullTextTwo] = React.useState("");
   const [indextwo, setIndextwo] = React.useState(0);
   const [goal, setGoal] = React.useState(350)
   function onClick(adjustment: number) {
@@ -152,32 +138,39 @@ export default function Home(){
   
     </SignedOut>
     <SignedIn>
-    <Card className="w-[350px] bg-dark-2">
-      <CardHeader className="flex">
-        <CardTitle className="text-white">Join Presentation</CardTitle>
-        </CardHeader>
-        <CardHeaderTwo className="flex-row">
-        <CardDescription className="w-[10px] h-[10px]  mr-2 mt-2 rounded-full  bg-slate-500  "></CardDescription>
-        <CardDescription className=" text-slate-300">Offline</CardDescription>
-        </CardHeaderTwo>
-      <CardContent>
-        <form>
-          <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col space-y-1.5">
-            
-            </div>
-            <div className="flex flex-col space-y-1.5">
-             
-             
-            </div>
-          </div>
-        </form>
-      </CardContent>
-      <CardFooter className="flex justify-between">
-       
-        <Button  className="w-full"><Link href="/room">Join</Link></Button>
-      </CardFooter>
-    </Card>
+    <Accordion type="multiple"  className="w-full">
+      <AccordionItem value="item-1">
+        <AccordionTrigger>Day 1</AccordionTrigger>
+        <AccordionContent>
+        <AccordionItem value="item-6" >  <AccordionTrigger>Getting Started</AccordionTrigger><AccordionContent>{`> `}Install the compiler</AccordionContent></AccordionItem>
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-2">
+        <AccordionTrigger>Day 2</AccordionTrigger>
+        <AccordionContent>
+          Yes. It comes with default styles that matches the other
+          components&apos; aesthetic.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Day 3</AccordionTrigger>
+        <AccordionContent>
+          Yes. It's animated by default, but you can disable it if you prefer.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-4">
+        <AccordionTrigger>Day 4</AccordionTrigger>
+        <AccordionContent>
+          Yes. It's animated by default, but you can disable it if you prefer.
+        </AccordionContent>
+      </AccordionItem>
+      <AccordionItem value="item-5">
+        <AccordionTrigger>Day 5</AccordionTrigger>
+        <AccordionContent>
+          Yes. It's animated by default, but you can disable it if you prefer.
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
     
     </SignedIn>
     </section>

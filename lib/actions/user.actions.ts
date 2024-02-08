@@ -24,6 +24,7 @@ interface Params {
   name: string;
   image: string;
   path: string;
+  
 }
 
 export async function updateUser({
