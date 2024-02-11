@@ -173,7 +173,7 @@ export default function Home(){
       </CardContent>
       <CardFooter className="flex justify-between">
        
-        <Button  className="w-full"><Link href="https://meet.google.com/jon-qbmu-dfu">Join</Link></Button>
+        <Button  className="w-full"><a href="https://meet.google.com/jon-qbmu-dfu">Join</a></Button>
       </CardFooter>
     </Card>
     
