@@ -1,6 +1,6 @@
 "use client";
 import { SignedIn } from "@clerk/nextjs";
-
+import {motion} from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import {Tilt} from 'react-tilt';
 import { SignedOut } from "@clerk/clerk-react";
@@ -15,17 +15,6 @@ import {
   CardTitle,
   CardHeaderTwo
 } from "@/components/ui/card"
-
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select"
-
 
 
 export default function Home(){
@@ -152,6 +141,11 @@ export default function Home(){
   
     </SignedOut>
     <SignedIn>
+    <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+>
     <Card className="w-[350px] bg-dark-2">
       <CardHeader className="flex">
         <CardTitle className="text-white">Join Presentation</CardTitle>
@@ -159,6 +153,10 @@ export default function Home(){
         <CardHeaderTwo className="flex-row">
         <CardDescription className="w-[10px] h-[10px]  mr-2 mt-2 rounded-full  bg-slate-500  "></CardDescription>
         <CardDescription className=" text-slate-300">Offline</CardDescription>
+        </CardHeaderTwo>
+        <CardHeaderTwo className="flex-row">
+       
+        <CardDescription className=" mt-5 text- text-slate-400">11:00AM-12:00PM</CardDescription>
         </CardHeaderTwo>
       <CardContent>
         <form>
@@ -175,10 +173,11 @@ export default function Home(){
       </CardContent>
       <CardFooter className="flex justify-between">
        
-        <Button  className="w-full"><Link href="/room">Join</Link></Button>
+        <Button  className="w-full"><Link href="https://meet.google.com/jon-qbmu-dfu">Join</Link></Button>
       </CardFooter>
     </Card>
     
+    </motion.div>
     </SignedIn>
     </section>
 

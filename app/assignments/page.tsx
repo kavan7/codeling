@@ -139,32 +139,53 @@ export default function Home(){
     </SignedOut>
     <SignedIn>
     <Accordion type="multiple"  className="w-full">
-      <AccordionItem value="item-1">
-        <AccordionTrigger>Day 1</AccordionTrigger>
+  <AccordionItem value="item-1"> {/*Day One*/}
+    <AccordionTrigger>Day 1</AccordionTrigger>
         <AccordionContent>
-        <AccordionItem value="item-6" >  <AccordionTrigger>Getting Started</AccordionTrigger><AccordionContent>{`> `}Install the compiler</AccordionContent></AccordionItem>
+        <AccordionItem value="item-6" >  <AccordionTrigger>{`    > `}Using Replit</AccordionTrigger><AccordionContent className="text-slate-300">In this course, we will be using an online python compiler called Repl.it. <br/>Please visit repl.it and start a new python project.</AccordionContent></AccordionItem>
         </AccordionContent>
+        <AccordionContent>
+        <AccordionItem value="item-7" >  <AccordionTrigger>{`     > `}Python basics</AccordionTrigger><AccordionContent className="text-slate-300">Python is very similar to a regular language.<br/> It takes instructions through code and compiles it together.</AccordionContent></AccordionItem>
+        </AccordionContent>
+        <AccordionContent>
+        <AccordionItem value="item-8" >  <AccordionTrigger>{`     > `}Variables</AccordionTrigger><AccordionContent className="text-slate-300">Variables are very crucial when programming. Variables are considered 'storage' where we assign a value to a variable. <br/></AccordionContent></AccordionItem>
+        </AccordionContent>
+
+        <AccordionContent>
+        <AccordionItem value="item-9"> <AccordionTrigger>{`     > `}Types of Variables</AccordionTrigger> <AccordionContent className="text-slate-300">Each variable will have a set type. For example numbers are 'int' for integer and sentences are 'str' for string.</AccordionContent></AccordionItem>
+        </AccordionContent>
+
+        <AccordionContent>
+          
+        <AccordionItem value="item-10" >  <AccordionTrigger>{`     > `}Receving User Input</AccordionTrigger><AccordionContent className="text-slate-300">So we understand that programming compiles instructions through code. <br/> However, some instructions may need to be added by the user to give the program more user friendly.<br/></AccordionContent></AccordionItem>
+        </AccordionContent>
+       
+        
+       
       </AccordionItem>
-      <AccordionItem value="item-2">
+
+     <AccordionItem value="item-2">{/*Day Two*/}
         <AccordionTrigger>Day 2</AccordionTrigger>
         <AccordionContent>
-          Yes. It comes with default styles that matches the other
-          components&apos; aesthetic.
+        <AccordionItem value="item-11" >  <AccordionTrigger>{`     > `}Conditions</AccordionTrigger><AccordionContent className="text-slate-300">Conditions in programming Conditions are basic “if, then” logic statements that modify how code is executed. Conditions are a key part of the decision-making process for computers.</AccordionContent></AccordionItem>
+        </AccordionContent>
+        <AccordionContent>
+        <AccordionItem value="item-12" >  <AccordionTrigger>{`     > `}If, else statements</AccordionTrigger><AccordionContent className="text-slate-300">If statements are used to execute code when there is a condition present. For example, if (True), *Code*.</AccordionContent></AccordionItem>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-3">
+      <AccordionItem value="item-3">{/*Day Three*/}
         <AccordionTrigger>Day 3</AccordionTrigger>
         <AccordionContent>
           Yes. It's animated by default, but you can disable it if you prefer.
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-4">
+      <AccordionItem value="item-4">{/*Day Four*/}
         <AccordionTrigger>Day 4</AccordionTrigger>
         <AccordionContent>
           Yes. It's animated by default, but you can disable it if you prefer.
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-5">
+      <AccordionItem value="item-5">{/*Day Five*/}
         <AccordionTrigger>Day 5</AccordionTrigger>
         <AccordionContent>
           Yes. It's animated by default, but you can disable it if you prefer.
