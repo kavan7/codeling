@@ -138,6 +138,7 @@ export default function Home(){
   
     </SignedOut>
     <SignedIn>
+
     <Accordion type="multiple"  className="w-full">
   <AccordionItem value="item-1"> {/*Day One*/}
     <AccordionTrigger>Day 1</AccordionTrigger>
