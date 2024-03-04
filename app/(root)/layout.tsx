@@ -12,7 +12,7 @@ import { SignedOut } from "@clerk/nextjs";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Kavan Codes',
+  title: 'Codeling',
   description : 'March Break Coding Bootcamp',
   
 }
