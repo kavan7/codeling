@@ -12,6 +12,7 @@ import {
     AccordionItem,
     AccordionTrigger,
   } from "@/components/ui/accordion"
+import Image from "next/image";
    
 
 export default function Home(){
@@ -174,24 +175,24 @@ export default function Home(){
         <AccordionItem value="item-12" >  <AccordionTrigger>{`     > `}If, else statements</AccordionTrigger><AccordionContent className="text-slate-300">If statements are used to execute code when there is a condition present. For example, if (True), *Code*.</AccordionContent></AccordionItem>
         </AccordionContent>
       </AccordionItem>
-      {/* <AccordionItem value="item-3">
-        <AccordionTrigger>Day 3</AccordionTrigger>
-        <AccordionContent>
-         
-        </AccordionContent>
+      <AccordionItem value="item-3">
+        <AccordionTrigger>Day 3   <Image src='/lock.svg' height={20} width={20} alt="lock"/></AccordionTrigger>
+        {/* <AccordionContent>
+      
+        </AccordionContent> */}
       </AccordionItem>
       <AccordionItem value="item-4">
-        <AccordionTrigger>Day 4</AccordionTrigger>
-        <AccordionContent>
-          Yes. It's animated by default, but you can disable it if you prefer.
-        </AccordionContent>
+        <AccordionTrigger>Day 4   <Image src='/lock.svg' height={20} width={20} alt="lock"/></AccordionTrigger>
+        {/* <AccordionContent>
+        
+        </AccordionContent> */}
       </AccordionItem>
       <AccordionItem value="item-5">
-        <AccordionTrigger>Day 5</AccordionTrigger>
-        <AccordionContent>
-          Yes. It's animated by default, but you can disable it if you prefer.
-        </AccordionContent> 
-      </AccordionItem> */}
+        <AccordionTrigger>Day 5   <Image src='/lock.svg' height={20} width={20} alt="lock"/></AccordionTrigger>
+        {/* <AccordionContent>
+    
+        </AccordionContent>  */}
+      </AccordionItem>
     </Accordion>
     
     </SignedIn>
