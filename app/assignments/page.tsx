@@ -174,24 +174,24 @@ export default function Home(){
         <AccordionItem value="item-12" >  <AccordionTrigger>{`     > `}If, else statements</AccordionTrigger><AccordionContent className="text-slate-300">If statements are used to execute code when there is a condition present. For example, if (True), *Code*.</AccordionContent></AccordionItem>
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-3">{/*Day Three*/}
+      {/* <AccordionItem value="item-3">
         <AccordionTrigger>Day 3</AccordionTrigger>
         <AccordionContent>
          
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-4">{/*Day Four*/}
+      <AccordionItem value="item-4">
         <AccordionTrigger>Day 4</AccordionTrigger>
         <AccordionContent>
           Yes. It's animated by default, but you can disable it if you prefer.
         </AccordionContent>
       </AccordionItem>
-      <AccordionItem value="item-5">{/*Day Five*/}
+      <AccordionItem value="item-5">
         <AccordionTrigger>Day 5</AccordionTrigger>
         <AccordionContent>
           Yes. It's animated by default, but you can disable it if you prefer.
-        </AccordionContent>
-      </AccordionItem>
+        </AccordionContent> 
+      </AccordionItem> */}
     </Accordion>
     
     </SignedIn>
