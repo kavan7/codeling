@@ -15,9 +15,49 @@ import {
   CardTitle,
   CardHeaderTwo
 } from "@/components/ui/card"
-
+import { Director, View } from "@millicast/sdk";
 
 export default function Home(){
+
+  const yourStreamAccountId = process.env.NEXT_PUBLIC_ACCOUNT_ID as string;
+  const yourStreamName = 'Codeling';
+  const [isLive, setIsLive] = React.useState<boolean>(true)
+
+  const tokenGenerator = () => Director.getSubscriber({
+    streamName: yourStreamName,
+    streamAccountId: yourStreamAccountId
+  });
+  
+  const [millicastView, setMillicastView] = React.useState<View | null>(null);
+  const videoRef = React.useRef<HTMLVideoElement>(null);
+
+  React.useEffect(() => {
+    const videoNode = videoRef.current;
+
+    const initializeMillicastView = async () => {
+      try {
+        const view = new View(yourStreamName, tokenGenerator);
+        view.on('track', (event) => {
+          console.log('Stream has started.');
+          if (videoNode) {
+            videoNode.srcObject = event.streams[0];
+            videoNode.hidden = false;
+            videoNode.autoplay = true;
+          }
+        });
+        await view.connect();
+        setMillicastView(view);
+
+      } catch (error) {
+        setIsLive(false);
+        console.error('Connection failed:', error);
+      }
+    };
+
+    initializeMillicastView();
+  }, [yourStreamName, yourStreamAccountId, setIsLive]);
+
+  
   const [text, setText] = React.useState("");
   const [fullText, setFullText] = React.useState("You're in.");
   const [index, setIndex] = React.useState(0);
@@ -50,6 +90,7 @@ export default function Home(){
   }, [indextwo, fullText]);
   return (
     <>
+ 
     <SignedIn>
    
     <h1 className='head-text text-[50px] text-left'><ul>{text}</ul></h1>
@@ -146,13 +187,14 @@ export default function Home(){
   whileInView={{ opacity: 1 }}
   viewport={{ once: true }}
 >
-    <Card className="w-[350px] bg-dark-2">
+
+  {isLive ? (  <Card className="w-[400px] bg-dark-2">
       <CardHeader className="flex">
         <CardTitle className="text-white">Join Presentation</CardTitle>
         </CardHeader>
         <CardHeaderTwo className="flex-row">
-        <CardDescription className="w-[10px] h-[10px]  mr-2 mt-2 rounded-full  bg-slate-500  "></CardDescription>
-        <CardDescription className=" text-slate-300">Offline</CardDescription>
+        <CardDescription className="w-[10px] h-[10px]  mr-2 mt-2 rounded-full  bg-[#1bc912]  "></CardDescription>
+        <CardDescription className=" text-slate-300">Online</CardDescription>
         </CardHeaderTwo>
         <CardHeaderTwo className="flex-row">
        
@@ -173,7 +215,47 @@ export default function Home(){
       </CardContent>
       <CardFooter className="flex justify-between">
        
-        <Button  className="w-full"><a target="_blank" href="https://meet.google.com/jon-qbmu-dfu">Join Google Meet</a></Button>
+        <Button  className="w-full"><a  href="/room">Join Live</a></Button>
+      </CardFooter>
+    </Card>) : (  <Card className="w-[350px] bg-dark-2">
+      <CardHeader className="flex">
+        <CardTitle className="text-white ">Join Presentation</CardTitle>
+        </CardHeader>
+        <CardHeaderTwo className="flex-row">
+        <CardDescription className="w-[10px] h-[10px]  mr-2 mt-2 rounded-full  bg-slate-500  "></CardDescription>
+        <CardDescription className=" text-slate-300 ">Offline</CardDescription>
+        </CardHeaderTwo>
+        <CardHeaderTwo className="flex-row">
+       
+        <CardDescription className=" mt-5 text- text-slate-400">11:00AM-12:00PM</CardDescription>
+        </CardHeaderTwo>
+      <CardContent>
+        <form>
+          <div className="grid w-full items-center gap-4">
+            <div className="flex flex-col space-y-1.5">
+            ``
+            </div>
+            <div className="flex flex-col space-y-1.5">
+             
+             
+            </div>
+          </div>
+        </form>
+      </CardContent>
+      <CardFooter className="flex justify-between">
+       
+        <Button  className="w-full"><a  href="/room">Join Waiting Room </a></Button>
+      </CardFooter>
+    </Card>)}
+    <Card className="w-[350px] bg-dark-2 mt-5">
+      <CardHeader className="flex">
+        <CardTitle className="text-white  mr-3 text-[30px]  text-center ">Assignments</CardTitle>
+        </CardHeader>
+      
+     
+      <CardFooter className="flex justify-between">
+       
+        <Button  className="w-full"><a  href="/room">Go to today's assignment</a></Button>
       </CardFooter>
     </Card>
     
@@ -193,6 +275,7 @@ export default function Home(){
 
 
     </SignedOut>
+ 
   </>
   )
 }

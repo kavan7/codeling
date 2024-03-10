@@ -9,6 +9,7 @@ import Bottombar from "@/components/shared/Bottombar";
 import { SignedIn } from "@clerk/nextjs";
 import { SignedOut } from "@clerk/nextjs";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -32,7 +33,9 @@ export default function RootLayout({
           
           <main className='flex flex-row bg-hero-pattern'>
           <SignedIn>
+            
             <LeftSidebar />
+            
             </SignedIn>
             <section className='main-container '>
              
