@@ -1,4 +1,3 @@
-"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 const LoginForm = () => {
@@ -31,7 +30,7 @@ const LoginForm = () => {
         <Link
           className="login__form__button"
           href={{
-            pathname: "/game-streaming",
+            pathname: "/room/game-streaming",
             query: { name: username, role: role },
           }}
         >
