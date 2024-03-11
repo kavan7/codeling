@@ -142,7 +142,7 @@ export default function Home(){
 
     <Accordion type="multiple"  className="w-full">
   <AccordionItem value="item-1"> {/*Day One*/}
-    <AccordionTrigger>Day 1 </AccordionTrigger>
+    <AccordionTrigger>Day 1 - Introduction to Python </AccordionTrigger>
         <AccordionContent>
         <AccordionItem value="item-6" >  <AccordionTrigger>{`    > `}Using Replit</AccordionTrigger><AccordionContent className="text-slate-300">In this course, we will be using an online python compiler called Repl.it. <br/>Please visit repl.it and start a new python project.</AccordionContent></AccordionItem>
         </AccordionContent>
@@ -188,15 +188,63 @@ export default function Home(){
        
       </AccordionItem>
 
-     <AccordionItem value="item-2">{/*Day Two*/}
-        <AccordionTrigger>Day 2 <Image src='/lock.svg' height={20} width={20} alt="lock"/></AccordionTrigger>
-        {/* <AccordionContent>
-        <AccordionItem value="item-11" >  <AccordionTrigger>{`     > `}Conditions</AccordionTrigger><AccordionContent className="text-slate-300">Conditions in programming Conditions are basic “if, then” logic statements that modify how code is executed. Conditions are a key part of the decision-making process for computers.</AccordionContent></AccordionItem>
-        </AccordionContent> */}
-        {/* <AccordionContent>
-        <AccordionItem value="item-12" >  <AccordionTrigger>{`     > `}If, else statements</AccordionTrigger><AccordionContent className="text-slate-300">If statements are used to execute code when there is a condition present. For example, if (True), *Code*.</AccordionContent></AccordionItem>
-        </AccordionContent> */}
-      </AccordionItem>
+     <AccordionItem value="item-2">{/*Day Two
+        <AccordionTrigger>Day 2 - Python For Loops and While Loops<Image src='/lock.svg' height={20} width={20} alt="lock"/></AccordionTrigger>
+         <AccordionContent>
+        <AccordionItem value="item-11" >  <AccordionTrigger>{`     > `}Introduction to Loops</AccordionTrigger><AccordionContent className="text-slate-300">In programming, loops are used to execute a block of code repeatedly until a certain condition is met.<br/> Python provides two main types of loops: for loops and while loops.</AccordionContent></AccordionItem>
+        </AccordionContent> 
+         <AccordionContent>
+        <AccordionItem value="item-12" >  <AccordionTrigger>{`     > `}For Loops</AccordionTrigger><AccordionContent className="text-slate-300">A for loop is used to iterate over a sequence <br/>(such as a list, tuple, dictionary, or string) and execute a block of code for each element in the sequence.</AccordionContent></AccordionItem>
+        </AccordionContent> 
+        <AccordionContent>
+        <AccordionItem value="item-21" >  <AccordionTrigger>{`     > `}While Loops</AccordionTrigger><AccordionContent className="text-slate-300">A while loop is used to execute a block of code repeatedly<br/> as long as a specified condition is true.</AccordionContent></AccordionItem>
+        </AccordionContent> 
+        <AccordionContent>
+        <AccordionItem value="item-22" >  <AccordionTrigger>{`     > `}Using For Loops and While Loops Together</AccordionTrigger><AccordionContent className="text-slate-300">In Python, it's common to use for loops and while loops together, depending on the <br/> situation and the problem you're solving. Let's see how you can mix them in your code:</AccordionContent></AccordionItem>
+        </AccordionContent> 
+        <AccordionContent>
+        <AccordionItem value="item-23" >  <AccordionTrigger>{`     > `}In-class Assignment</AccordionTrigger><AccordionContent className="text-slate-300"># Using a FOR loop to print numbers from 1 to 5 <br/># Using a WHILE loop to print numbers from 1 to 5</AccordionContent></AccordionItem>
+        </AccordionContent> 
+        <AccordionContent>
+        <AccordionItem value="item-24" >  <AccordionTrigger>{`     > `}Assignment Two</AccordionTrigger><AccordionContent className="text-slate-300">Objective: The objective of this assignment is to practice using Python for loops and while loops to solve various problems.
+
+Instructions:
+<ol>
+  <li>
+    Write Python code to solve each of the following problems using both for loops and while loops.
+  </li>
+  <li>
+    Include comments in your code to explain each step and your approach to solving the problem.
+  </li>
+  <li>
+    Test your code with different inputs to ensure it behaves as expected.
+  </li>
+  <li>
+    Submit your Python code file containing solutions to all the problems.
+  </li>
+</ol>
+
+Problems:
+<ol>
+  <li>
+    Write a program to calculate the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
+  </li>
+  <li>
+    Write a program to print the Fibonacci series up to a specified number of terms. The Fibonacci series is a sequence of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1.
+  </li>
+  <li>
+    Write a program to find the sum of all the elements in a given list of integers.
+  </li>
+  <li>
+    Write a program to count the number of vowels in a given string. Consider both uppercase and lowercase vowels (i.e., 'a', 'e', 'i', 'o', 'u').
+  </li>
+  <li>
+    Write a program to determine whether a given number is prime or not.
+  </li>
+</ol></AccordionContent></AccordionItem>
+        </AccordionContent> 
+        */}
+      </AccordionItem> 
       <AccordionItem value="item-3">
         <AccordionTrigger>Day 3   <Image src='/lock.svg' height={20} width={20} alt="lock"/></AccordionTrigger>
         {/* <AccordionContent>
