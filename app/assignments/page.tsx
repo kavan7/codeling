@@ -143,7 +143,7 @@ export default function Home(){
     <Accordion type="multiple"  className="w-full">
   <AccordionItem value="item-1"> {/*Day One*/}
     <AccordionTrigger>Day 1 <Image src='/lock.svg' height={20} width={20} alt="lock"/></AccordionTrigger>
-        {/* <AccordionContent>
+        <AccordionContent>
         <AccordionItem value="item-6" >  <AccordionTrigger>{`    > `}Using Replit</AccordionTrigger><AccordionContent className="text-slate-300">In this course, we will be using an online python compiler called Repl.it. <br/>Please visit repl.it and start a new python project.</AccordionContent></AccordionItem>
         </AccordionContent>
         <AccordionContent>
@@ -162,7 +162,7 @@ export default function Home(){
         <AccordionItem value="item-10" >  <AccordionTrigger>{`     > `}Receving User Input</AccordionTrigger><AccordionContent className="text-slate-300">So we understand that programming compiles instructions through code. <br/> However, some instructions may need to be added by the user to give the program more user friendly.<br/></AccordionContent></AccordionItem>
         </AccordionContent>
        
-         */}
+        
        
       </AccordionItem>
 

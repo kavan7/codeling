@@ -129,7 +129,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                 />
               )}
             </FormLabel>
-            <FormControl className='flex-1 text-base-semibold text-gray-200'>
+            <FormControl className='flex-1 text-base-semibold text-slate-500'>
               <Input
                 type='file'
                 accept='image/*'
