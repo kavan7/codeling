@@ -129,7 +129,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                 />
               )}
             </FormLabel>
-            <FormControl className='flex-1 text-base-semibold text-slate-500'>
+            <FormControl className='flex-1 text-base-semibold text-black'>
               <Input
                 type='file'
                 accept='image/*'
@@ -153,7 +153,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
             <FormControl>
               <Input
                 type='text'
-                className='account-form_input no-focus'
+                className='account-form_input text-black no-focus'
                 {...field}
               />
             </FormControl>
@@ -173,7 +173,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
             <FormControl>
               <Input
                 type='text'
-                className='account-form_input no-focus'
+                className='account-form_input text-black no-focus'
                 {...field}
               />
             </FormControl>

@@ -2,8 +2,16 @@
 import React from "react";
 
 import VideoInterface from "@/components/VideoInterface";
+import ChatWindow from "@/components/ChatWindow";
 
-const GameStream = () => {
+import { currentUser } from '@clerk/nextjs';
+ 
+export default async function Page() {
+  const user = await currentUser();
+ 
+  if (!user) return <div>Not signed in</div>;
+ 
+
   
   return (
     <div className="">
@@ -14,6 +22,7 @@ const GameStream = () => {
       {/* Game Streaming Platform */}
       {/* Video Interface */}
       <VideoInterface />
+      <ChatWindow user={user?.firstName}/>
       {/* Chat Panel */}
     
     </div>
@@ -21,4 +30,3 @@ const GameStream = () => {
     
   );
 };
-export default GameStream;

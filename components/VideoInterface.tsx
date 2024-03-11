@@ -12,7 +12,6 @@ import { count } from "console";
 
 
 
-
 const VideoInterface: React.FC = () => {
   const yourStreamAccountId = process.env.NEXT_PUBLIC_ACCOUNT_ID as string;
   const yourStreamName = 'Codeling';
@@ -43,7 +42,7 @@ const VideoInterface: React.FC = () => {
         await view.connect();
         
         setMillicastView(view);
-        setCounter(count => count + 1)
+        
       } catch (error) {
         setIsLive(false);
         console.error('Connection failed:', error);
@@ -54,9 +53,6 @@ const VideoInterface: React.FC = () => {
   }, [yourStreamName, yourStreamAccountId, setIsLive]);
 
  
-  // ...
-  // In the main() function, after a user joins the conference, we can add the user to the participants list
-  // Listen to participant events
 
   return (
    
@@ -64,7 +60,7 @@ const VideoInterface: React.FC = () => {
       
       {isLive ? (<div>
         <video id="streaming-video-placeholder" ref={videoRef} autoPlay />
-        {counter} people watching.
+       
         </div>
       ) : (
         <div className=" mt-[20px] flex flex-frow">
