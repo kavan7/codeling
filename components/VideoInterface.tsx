@@ -57,9 +57,9 @@ const VideoInterface: React.FC = () => {
       {isLive ? (
         <video id="streaming-video-placeholder" ref={videoRef} autoPlay />
       ) : (
-        <div className="flex-row">
+        <div className=" mt-[20px] flex flex-frow">
         <Image src="/cloud.svg" alt="cloud" className="mb-[10px]" height={20} width={40}/>
-        <h1 className="text-slate-500 text-[20px] "> Stream is currently offline. </h1>
+        <h1 className="text-slate-500 text-[20px] mt-1 ml-5"> Stream is currently offline. </h1>
         </div>
       )}
     </div>
