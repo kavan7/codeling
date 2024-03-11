@@ -162,7 +162,29 @@ export default function Home(){
         <AccordionItem value="item-10" >  <AccordionTrigger>{`     > `}Receving User Input</AccordionTrigger><AccordionContent className="text-slate-300">So we understand that programming compiles instructions through code. <br/> However, some instructions may need to be added by the user to give the program more user friendly.<br/></AccordionContent></AccordionItem>
         </AccordionContent>
        
-        
+        <AccordionContent>
+          
+        <AccordionItem value="item-20">
+  <AccordionTrigger>{`>`} Assignment One</AccordionTrigger>
+  <AccordionContent className="text-slate-300">
+    <p><strong>Assignment: Basic Grade Calculator</strong></p>
+    
+    <p><strong>Instructions:</strong></p>
+    <p>Write a Python program that calculates the grade of a student based on their exam score.</p>
+    
+    <p><strong>Requirements:</strong></p>
+    <ul className="mt3">
+      <li>The program should ask the user to input the exam score as a number.</li>
+      <li>If the exam score is 90 or above, the program should print "Grade: A".</li>
+      <li>If the exam score is between 80 and 89 (inclusive), the program should print "Grade: B".</li>
+      <li>If the exam score is between 70 and 79 (inclusive), the program should print "Grade: C".</li>
+      <li>If the exam score is between 60 and 69 (inclusive), the program should print "Grade: D".</li>
+      <li>If the exam score is below 60, the program should print "Grade: F".</li>
+    </ul>
+  </AccordionContent>
+</AccordionItem>
+
+          </AccordionContent>
        
       </AccordionItem>
 

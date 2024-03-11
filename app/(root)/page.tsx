@@ -227,7 +227,7 @@ export default function Home(){
         </CardHeaderTwo>
         <CardHeaderTwo className="flex-row">
        
-        <CardDescription className=" mt-5 text- text-slate-400">11:00AM-12:00PM</CardDescription>
+        <CardDescription className=" mt-5 text- text-slate-400">11:00AM-11:30AM</CardDescription>
         </CardHeaderTwo>
       <CardContent>
         <form>
@@ -255,7 +255,7 @@ export default function Home(){
      
       <CardFooter className="flex justify-between">
        
-        <Button  className="w-full"><a  href="/room">Go to today's assignment</a></Button>
+        <Button  className="w-full"><a  href="/assignments">Go to today's assignment</a></Button>
       </CardFooter>
     </Card>
     
