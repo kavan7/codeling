@@ -243,7 +243,7 @@ Problems:
   </li>
 </ol></AccordionContent></AccordionItem>
         </AccordionContent> 
-        */}
+        
       </AccordionItem> 
       <AccordionItem value="item-3">
         <AccordionTrigger>Day 3   <Image src='/lock.svg' height={20} width={20} alt="lock"/></AccordionTrigger>
