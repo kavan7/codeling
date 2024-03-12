@@ -22,7 +22,7 @@ export default async function Page() {
       {/* Game Streaming Platform */}
       {/* Video Interface */}
       <VideoInterface />
-      <ChatWindow user={user?.firstName}/>
+      <ChatWindow user={user?.firstName || user?.username}/>
       {/* Chat Panel */}
     
     </div>
