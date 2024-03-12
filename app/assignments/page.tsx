@@ -188,8 +188,8 @@ export default function Home(){
        
       </AccordionItem>
 
-     <AccordionItem value="item-2">{/*Day Two
-        <AccordionTrigger>Day 2 - Python For Loops and While Loops<Image src='/lock.svg' height={20} width={20} alt="lock"/></AccordionTrigger>
+     <AccordionItem value="item-2">
+        <AccordionTrigger>Day 2 - Python For Loops and While Loops</AccordionTrigger>
          <AccordionContent>
         <AccordionItem value="item-11" >  <AccordionTrigger>{`     > `}Introduction to Loops</AccordionTrigger><AccordionContent className="text-slate-300">In programming, loops are used to execute a block of code repeatedly until a certain condition is met.<br/> Python provides two main types of loops: for loops and while loops.</AccordionContent></AccordionItem>
         </AccordionContent> 
