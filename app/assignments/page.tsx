@@ -190,6 +190,12 @@ export default function Home(){
 
      <AccordionItem value="item-2">
         <AccordionTrigger>Day 2 - Python For Loops and While Loops</AccordionTrigger>
+        <AccordionContent>
+        <AccordionItem value="item-26" >  <AccordionTrigger>{`     > `}Introduction to Arrays</AccordionTrigger><AccordionContent className="text-slate-300">An array is a data structure that stores a collection of elements, typically of the same type, in a contiguous memory location.<br/> In Python, arrays are implemented using the built-in array module or more commonly using lists.</AccordionContent></AccordionItem>
+        </AccordionContent> 
+        <AccordionContent>
+        <AccordionItem value="item-26" >  <AccordionTrigger>{`     > `}Accessing elements in Arrays</AccordionTrigger><AccordionContent className="text-slate-300">Elements in an array are accessed using their index. In Python, indexing starts at 0. </AccordionContent></AccordionItem>
+        </AccordionContent> 
          <AccordionContent>
         <AccordionItem value="item-11" >  <AccordionTrigger>{`     > `}Introduction to Loops</AccordionTrigger><AccordionContent className="text-slate-300">In programming, loops are used to execute a block of code repeatedly until a certain condition is met.<br/> Python provides two main types of loops: for loops and while loops.</AccordionContent></AccordionItem>
         </AccordionContent> 
@@ -223,24 +229,18 @@ Instructions:
     Submit your Python code file containing solutions to all the problems.
   </li>
 </ol>
-
-Problems:
+<br/>
+Problems
 <ol>
-  <li>
-    Write a program to calculate the factorial of a given number. The factorial of a non-negative integer n is the product of all positive integers less than or equal to n.
-  </li>
-  <li>
-    Write a program to print the Fibonacci series up to a specified number of terms. The Fibonacci series is a sequence of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1.
-  </li>
+
+
   <li>
     Write a program to find the sum of all the elements in a given list of integers.
   </li>
   <li>
     Write a program to count the number of vowels in a given string. Consider both uppercase and lowercase vowels (i.e., 'a', 'e', 'i', 'o', 'u').
   </li>
-  <li>
-    Write a program to determine whether a given number is prime or not.
-  </li>
+
 </ol></AccordionContent></AccordionItem>
         </AccordionContent> 
         
