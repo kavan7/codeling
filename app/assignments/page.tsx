@@ -246,10 +246,10 @@ Problems
         
       </AccordionItem> 
       <AccordionItem value="item-3">
-        <AccordionTrigger>Day 3   <Image src='/lock.svg' height={20} width={20} alt="lock"/></AccordionTrigger>
-        {/* <AccordionContent>
-      
-        </AccordionContent> */}
+        <AccordionTrigger>Day 3 - Functions </AccordionTrigger>
+        <AccordionContent>
+        Functions in programming are blocks of code that perform a specific task or operation. <br/>They allow you to break down complex tasks into smaller, more manageable pieces, making your code more organized, reusable, and easier to understa
+        </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-4">
         <AccordionTrigger>Day 4   <Image src='/lock.svg' height={20} width={20} alt="lock"/></AccordionTrigger>
