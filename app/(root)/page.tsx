@@ -15,6 +15,7 @@ import {
   CardTitle,
   CardHeaderTwo
 } from "@/components/ui/card"
+//@ts-ignore
 import { Director, View } from "@millicast/sdk";
 
 export default function Home(){
@@ -37,6 +38,7 @@ export default function Home(){
     const initializeMillicastView = async () => {
       try {
         const view = new View(yourStreamName, tokenGenerator);
+        //@ts-ignore
         view.on('track', (event) => {
           console.log('Stream has started.');
           if (videoNode) {
@@ -63,7 +65,7 @@ export default function Home(){
   const [index, setIndex] = React.useState(0);
 
   const [texttwo, settexttwo] = React.useState("")
-  const [fullTextTwo, setFullTextTwo] = React.useState("Welcome to the March Break coding bootcamp!");
+  const [fullTextTwo, setFullTextTwo] = React.useState("Welcome to Codeling!");
   const [indextwo, setIndextwo] = React.useState(0);
   const [goal, setGoal] = React.useState(350)
   function onClick(adjustment: number) {
@@ -100,8 +102,8 @@ export default function Home(){
    
     <SignedOut>
    
-    <h1 className='head-text text-[32px] text-left md:text-[50px]'><ul>2024 March Break <br className="md:hidden"/>Coding Bootcamp</ul></h1>
-    <p className="mb-3 pt-5 font-normal text-gray-300 dark:text-gray-400">This course is completely free <br className="md:hidden"/>and beginner friendly </p>
+    <h1 className='head-text text-[32px] text-left md:text-[50px]'><ul>2024 March Break <br className="md:hidden"/>Coding Bootcamp is now finished!</ul></h1>
+    <p className="mb-3 pt-5 font-normal text-gray-300 dark:text-gray-400">Thank you everyone <br className="md:hidden"/>who participated! </p>
   
 
     <div
@@ -112,11 +114,11 @@ export default function Home(){
 
 <div className="">
 
-       <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900 py-5"> {`>`} &nbsp; Learn something new <br className="md:hidden"/>during the March Break! </h5>
+       <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900 py-5"> {`>`} &nbsp; Codeling will keep running on weekends <br className="md:hidden"/>during the March Break! </h5>
  
 
-   <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> {`>`} &nbsp; Will run from March 11-15</h5>
-   <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900 py-5"> {`>`} &nbsp; Limited Spots</h5>
+   <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> {`>`} &nbsp; Review various programming topics </h5>
+   <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900 py-5"> {`>`} &nbsp; Every Saturday at 11am</h5>
   
 </div>
 </div>
@@ -153,7 +155,7 @@ export default function Home(){
       
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900">  {`>`} &nbsp; How will it work? </h5>
       
-        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Presentation on the Kavan Codes platform &nbsp;&nbsp;&nbsp;
+        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Livestream on the Kavan Codes platform with a functional chat!&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
        
     </div>
@@ -172,7 +174,7 @@ export default function Home(){
       
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> {`>`} &nbsp; Assignments </h5>
       
-        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Daily task given after each lesson&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Task given after each session&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
        
     </div>
 </div>
@@ -186,11 +188,12 @@ export default function Home(){
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
   viewport={{ once: true }}
+  className="flex flex-row"
 >
 
   {isLive ? (  <Card className="w-[400px] bg-dark-2">
       <CardHeader className="flex">
-        <CardTitle className="text-white">Join Presentation</CardTitle>
+        <CardTitle className="text-white">Join Livestream</CardTitle>
         </CardHeader>
         <CardHeaderTwo className="flex-row">
         <CardDescription className="w-[10px] h-[10px]  mr-2 mt-2 rounded-full  bg-[#1bc912]  "></CardDescription>
@@ -227,7 +230,7 @@ export default function Home(){
         </CardHeaderTwo>
         <CardHeaderTwo className="flex-row">
        
-        <CardDescription className=" mt-5 text- text-slate-400">11:00AM-11:30AM</CardDescription>
+        <CardDescription className=" mt-5 text- text-slate-400">11:00AM-12:00PM</CardDescription>
         </CardHeaderTwo>
       <CardContent>
         <form>
@@ -247,18 +250,37 @@ export default function Home(){
         <Button  className="w-full"><a  href="/room">Join Waiting Room </a></Button>
       </CardFooter>
     </Card>)}
-    <Card className="w-[350px] bg-dark-2 mt-5">
+    <Card className="w-[350px] ml-11  bg-dark-2">
       <CardHeader className="flex">
-        <CardTitle className="text-white  mr-3 text-[30px]  text-center ">Assignments</CardTitle>
+        <CardTitle className="text-white text-[25px]  ">Assignments</CardTitle>
         </CardHeader>
       
-     
+        <CardHeaderTwo className="flex-row">
+        <CardDescription className="w-[10px] h-[10px]  mr-2 mt-2 rounded-full  bg-slate-500  "></CardDescription>
+        <CardDescription className=" text-slate-300 ">Due March 23, 2024 </CardDescription>
+        </CardHeaderTwo>
+        <CardHeaderTwo className="flex-row">
+  
+       <CardDescription className=" text- mt-3 text-slate-400">Check out this weeks problem</CardDescription>
+       </CardHeaderTwo>
+      <CardContent>
+        <form>
+          <div className="grid w-full items-center gap-4">
+            <div className="flex flex-col space-y-1.5">
+            ``
+            </div>
+            <div className="flex flex-col space-y-1.5">
+             
+             
+            </div>
+          </div>
+        </form>
+      </CardContent>
       <CardFooter className="flex justify-between">
        
-        <Button  className="w-full"><a  href="/assignments">Go to today's assignment</a></Button>
+        <Button  className="w-full"><a  href="/assignments">Go to assignments </a></Button>
       </CardFooter>
     </Card>
-    
     </motion.div>
     </SignedIn>
     </section>
