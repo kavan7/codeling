@@ -114,7 +114,7 @@ export default function Home(){
 
 <div className="">
 
-       <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900 py-5"> {`>`} &nbsp; Codeling will keep running on weekends <br className="md:hidden"/>during the March Break! </h5>
+       <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900 py-5"> {`>`} &nbsp; Codeling will keep running on weekends <br className="md:hidden"/> </h5>
  
 
    <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> {`>`} &nbsp; Review various programming topics </h5>
