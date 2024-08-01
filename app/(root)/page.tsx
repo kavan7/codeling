@@ -4,8 +4,7 @@ import {motion} from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import {Tilt} from 'react-tilt';
 import { SignedOut } from "@clerk/clerk-react";
-import Link from "next/link";
-import * as React from "react"
+
 import {
   Card,
   CardContent,
@@ -17,6 +16,79 @@ import {
 } from "@/components/ui/card"
 //@ts-ignore
 import { Director, View } from "@millicast/sdk";
+
+import * as React from "react"
+import Image from "next/image"
+import Link from "next/link"
+import {
+  ChevronLeft,
+  ChevronRight,
+  Copy,
+  CreditCard,
+  File,
+  
+  LineChart,
+  ListFilter,
+  MoreVertical,
+  Package,
+  Package2,
+  PanelLeft,
+  Search,
+  Settings,
+  ShoppingCart,
+  Truck,
+  Users2,
+} from "lucide-react"
+
+import { Badge } from "@/components/ui/badge"
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb"
+
+import {
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Input } from "@/components/ui/input"
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+} from "@/components/ui/pagination"
+import { Progress } from "@/components/ui/progress"
+import { Separator } from "@/components/ui/separator"
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/components/ui/tabs"
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip"
+
 
 export default function Home(){
 
@@ -99,11 +171,11 @@ export default function Home(){
     <h1 className=" mt-4 text-primary font-medium lg:text-[25px] sm:text-[26px] xs:text-[20px] text-[16px] lg:leading-[40px] text-light-1">{texttwo}</h1>
 
     </SignedIn>
-   
+ 
     <SignedOut>
    
-    <h1 className='head-text text-[32px] text-left md:text-[50px]'><ul>2024 March Break <br className="md:hidden"/>Coding Bootcamp is now finished!</ul></h1>
-    <p className="mb-3 pt-5 font-normal text-gray-300 dark:text-gray-400">Thank you everyone <br className="md:hidden"/>who participated! </p>
+    <h1 className='head-text text-[32px] text-left md:text-[50px]'><ul>2025 Codeling BootCamp Registration<br className="md:hidden"/> is now live!</ul></h1>
+    <p className="mb-3 pt-5 font-normal text-gray-300 dark:text-gray-400">Free feedback program  <br className="md:hidden"/>has limited spots </p>
   
 
     <div
@@ -114,11 +186,11 @@ export default function Home(){
 
 <div className="">
 
-       <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900 py-5"> {`>`} &nbsp; Codeling will keep running on weekends <br className="md:hidden"/> </h5>
+       <h5 className="mb-2 text-2xl tracking-tight text-white-900 py-5"> {`>`} &nbsp; <b className="">Fun Projects:</b> Work on exciting projects that spark your imagination. <br className="md:hidden"/> </h5>
  
 
-   <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> {`>`} &nbsp; Review various programming topics </h5>
-   <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900 py-5"> {`>`} &nbsp; Every Saturday at 11am</h5>
+   <h5 className="mb-2 text-2xl  tracking-tight text-white-900"> {`>`} &nbsp; <b>Interactive Lessons:</b> Enjoy hands-on learning with interactive coding challenges. </h5>
+   <h5 className="mb-2 text-2xl  tracking-tight text-white-900 py-5"> {`>`} &nbsp; <b>Certificate of Completion:</b> Earn a cool certificate to show off your new skills!</h5>
   
 </div>
 </div>
@@ -138,7 +210,7 @@ export default function Home(){
       
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> {`>`} &nbsp; What will I learn?</h5>
       
-        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Getting started on the fundamentals of python for beginners </p>
+        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">The fundamentals of computer programming </p>
        
     </div>
 </div>
@@ -155,7 +227,7 @@ export default function Home(){
       
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900">  {`>`} &nbsp; How will it work? </h5>
       
-        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Livestream on the Kavan Codes platform with a functional chat!&nbsp;&nbsp;&nbsp;
+        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Livestream on the Codeling platform &nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
        
     </div>
