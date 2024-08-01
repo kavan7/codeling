@@ -88,6 +88,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import GetStarted from "@/components/shared/GetStarted";
 
 
 export default function Home(){
@@ -174,7 +175,7 @@ export default function Home(){
  
     <SignedOut>
    
-    <h1 className='head-text text-[32px] text-left md:text-[50px]'><ul>2025 Codeling BootCamp Registration<br className="md:hidden"/> is now live!</ul></h1>
+    <h1 className='head-text text-[32px] text-left animated-nav md:text-[50px]'><ul>2025 Codeling BootCamp Registration<br className="md:hidden"/> is now live!</ul></h1>
     <p className="mb-3 pt-5 font-normal text-gray-300 dark:text-gray-400">Free feedback program  <br className="md:hidden"/>has limited spots </p>
   
 
@@ -186,11 +187,11 @@ export default function Home(){
 
 <div className="">
 
-       <h5 className="mb-2 text-2xl tracking-tight text-white-900 py-5"> {`>`} &nbsp; <b className="">Fun Projects:</b> Work on exciting projects that spark your imagination. <br className="md:hidden"/> </h5>
+       <h5 className="mb-2 text-2xl tracking-tight text-white-900 py-5 animated-nav"> {`>`} &nbsp; <b className="">Fun Projects:</b> Work on exciting projects that spark your imagination. <br className="md:hidden"/> </h5>
  
 
-   <h5 className="mb-2 text-2xl  tracking-tight text-white-900"> {`>`} &nbsp; <b>Interactive Lessons:</b> Enjoy hands-on learning with interactive coding challenges. </h5>
-   <h5 className="mb-2 text-2xl  tracking-tight text-white-900 py-5"> {`>`} &nbsp; <b>Certificate of Completion:</b> Earn a cool certificate to show off your new skills!</h5>
+   <h5 className="mb-2 text-2xl  tracking-tight text-white-900 animated-nav"> {`>`} &nbsp; <b>Interactive Lessons:</b> Enjoy hands-on learning with interactive coding challenges. </h5>
+   <h5 className="mb-2 text-2xl  tracking-tight text-white-900 py-5 animated-nav "> {`>`} &nbsp; <b>Certificate of Completion:</b> Earn a cool certificate to show off your new skills!</h5>
   
 </div>
 </div>
@@ -253,7 +254,7 @@ export default function Home(){
       </div>
       
     </Tilt>
-  
+   
     </SignedOut>
     <SignedIn>
     <motion.div
