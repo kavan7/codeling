@@ -93,6 +93,29 @@ import GetStarted from "@/components/shared/GetStarted";
 
 export default function Home(){
 
+  const MOBILE_NAV_ITEMS = [
+    {
+      id: 0,
+      navTitle: "home"
+    },
+    {
+      id: 1,
+      navTitle: "showreel"
+    },
+    {
+      id: 2,
+      navTitle: "services"
+    },
+    {
+      id: 3,
+      navTitle: "about"
+    },
+    {
+      id: 4,
+      navTitle: "contact"
+    }
+  ]
+  
   const yourStreamAccountId = process.env.NEXT_PUBLIC_ACCOUNT_ID as string;
   const yourStreamName = 'Codeling';
   const [isLive, setIsLive] = React.useState<boolean>(true)
@@ -163,9 +186,99 @@ export default function Home(){
       }, 35);
     }
   }, [indextwo, fullText]);
+  const [mobileNavOpen, setMobileNavOpen] = React.useState(false)
+
+
+  const hideNavItemsVariant = {
+    opened: {
+      opacity: 0,
+      y: "-100%",
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut"
+      }
+    },
+    closed: {
+      opacity: 1,
+      y: "0%",
+      transition: {
+        delay: 1.1,
+        duration: 0.5,
+        ease: "easeInOut"
+      }
+    }
+  }
+
+  const mobileMenuVariant = {
+    opened: {
+      y: "0%",
+      transition: {
+        delay: 0.15,
+        duration: 1.1,
+        ease: [0.74, 0, 0.19, 1.02]
+      }
+    },
+    closed: {
+      y: "-100%",
+      transition: {
+        delay: 0.35,
+        duration: 0.63,
+        ease: [0.74, 0, 0.19, 1.02]
+      }
+    }
+  }
+
+  const fadeInVariant = {
+    opened: {
+      opacity: 1,
+      transition: {
+        delay: 1.2
+      }
+    },
+    closed: { opacity: 0 }
+  }
+
+  const ulVariant = {
+    opened: {
+      transition: {
+        delayChildren: 1,
+        staggerChildren: 0.18
+      }
+    },
+    closed: {
+      transition: {
+        staggerChildren: 0.06,
+        staggerDirection: -1
+      }
+    }
+  }
+
+  const liVariant = {
+    opened: {
+      opacity: 1,
+      y: "0%",
+      transition: {
+        duration: 0.65,
+        ease: "easeOut"
+      }
+    },
+    closed: {
+      opacity: 0,
+      y: "100%",
+      transition: {
+        duration: 0.25,
+        ease: "easeInOut"
+      }
+    }
+  }
+
+  const fadeInStart = { opacity: 0 }
+  const fadeInEnd = { opacity: 1 }
+  const fadeInTransition = { duration: 1 }
+
   return (
     <>
- 
+
     <SignedIn>
    
     <h1 className='head-text text-[50px] text-left'><ul>{text}</ul></h1>
@@ -174,11 +287,22 @@ export default function Home(){
     </SignedIn>
  
     <SignedOut>
-   
+    <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  className="flex flex-col"
+>
     <h1 className='head-text text-[32px] text-left animated-nav md:text-[50px]'><ul>2025 Codeling BootCamp Registration<br className="md:hidden"/> is now live!</ul></h1>
     <p className="mb-3 pt-5 font-normal text-gray-300 dark:text-gray-400">Free feedback program  <br className="md:hidden"/>has limited spots </p>
   
-
+</motion.div>
+<motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  className="flex flex-col"
+>
     <div
  
 
@@ -195,11 +319,18 @@ export default function Home(){
   
 </div>
 </div>
-
+</motion.div>
               </SignedOut>
      
         <section className='mt-9 flex flex-col md:flex-row gap-10 '>
     <SignedOut>
+
+    <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  className="flex flex-col"
+>
         <Tilt className="xs:w-[250px] w-full">
       <div
  
@@ -217,6 +348,13 @@ export default function Home(){
 </div>
       </div>
     </Tilt>
+    </motion.div>
+    <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  className="flex flex-col"
+>
     <Tilt className="xs:w-[250px]  h-[200px] w-full">
       <div
  
@@ -236,7 +374,16 @@ export default function Home(){
       </div>
       
     </Tilt>
+   
+    </motion.div>
+    <motion.div
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  className="flex flex-col"
+>
     <Tilt className="xs:w-[250px] w-full">
+     
       <div
  
  
@@ -254,6 +401,7 @@ export default function Home(){
       </div>
       
     </Tilt>
+ </motion.div>
    
     </SignedOut>
     <SignedIn>
