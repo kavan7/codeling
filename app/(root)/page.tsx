@@ -4,7 +4,7 @@ import {motion} from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import {Tilt} from 'react-tilt';
 import { SignedOut } from "@clerk/clerk-react";
-
+import IconBooks from '@tabler/icons-react';
 import {
   Card,
   CardContent,
@@ -14,6 +14,7 @@ import {
   CardTitle,
   CardHeaderTwo
 } from "@/components/ui/card"
+import { FaLocationArrow } from 'react-icons/fa6'
 //@ts-ignore
 import { Director, View } from "@millicast/sdk";
 
@@ -89,6 +90,10 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 import GetStarted from "@/components/shared/GetStarted";
+import { BackgroundBeams } from "@/components/ui/background-beams";
+import { Meteors } from "@/components/ui/meteors";
+import { WavyBackground } from "@/components/ui/wavy-background";
+import MagicButton from "@/components/ui/MagicButton";
 
 
 export default function Home(){
@@ -278,7 +283,7 @@ export default function Home(){
 
   return (
     <>
-
+ 
     <SignedIn>
    
     <h1 className='head-text text-[50px] text-left'><ul>{text}</ul></h1>
@@ -287,14 +292,15 @@ export default function Home(){
     </SignedIn>
  
     <SignedOut>
-    <motion.div
+        <motion.div
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
   viewport={{ once: true }}
   className="flex flex-col"
 >
+
     <h1 className='head-text text-[32px] text-left animated-nav md:text-[50px]'><ul>2025 Codeling BootCamp Registration<br className="md:hidden"/> is now live!</ul></h1>
-    <p className="mb-3 pt-5 font-normal text-gray-300 dark:text-gray-400">Free feedback program  <br className="md:hidden"/>has limited spots </p>
+    <p className="mb-3 pt-5 font-normal text-gray-300 dark:text-gray-400">Limited Spots<br className="md:hidden"/> </p>
   
 </motion.div>
 <motion.div
@@ -332,21 +338,45 @@ export default function Home(){
   className="flex flex-col"
 >
         <Tilt className="xs:w-[250px] w-full">
-      <div
+        <div className="">
+      <div className=" w-full relative max-w-xs">
+        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-[#000319] rounded-full blur-3xl" />
+        <div className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+          <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-2 w-2 text-gray-300"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
+              />
+            </svg>
+          </div>
  
-
-      className='w-full  h-[200px] p-[3px] rounded-[20px] shadow-card'>
-<div className="max-w-sm bg-black-900 border border-gray-200 rounded-lg shadow dark:bg-white dark:border-gray-700">
-
-    <div className="p-5">
-      
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> {`>`} &nbsp; What will I learn?</h5>
-      
-        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">The fundamentals of computer programming </p>
-       
-    </div>
-</div>
+          <h1 className="font-bold text-xl text-white mb-4 relative z-50">
+            What will I learn?
+          </h1>
+ 
+          <p className="font-normal text-base text-slate-500 mb-4 relative z-50">
+           The fundamentals of programming
+          </p>
+          <a href="https://www.linkedin.com/company/codeling" target="_blank">
+          <button className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300">
+            Explore
+           
+          </button>
+          </a>
+          {/* Meaty part - Meteor effect */}
+          <Meteors number={20} />
+        </div>
       </div>
+    </div>
     </Tilt>
     </motion.div>
     <motion.div
@@ -355,24 +385,46 @@ export default function Home(){
   viewport={{ once: true }}
   className="flex flex-col"
 >
-    <Tilt className="xs:w-[250px]  h-[200px] w-full">
-      <div
+<Tilt className="xs:w-[250px] w-full">
+        <div className="">
+      <div className=" w-full relative max-w-xs">
+        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-[#000319] rounded-full blur-3xl" />
+        <div className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+          <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-2 w-2 text-gray-300"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
+              />
+            </svg>
+          </div>
  
-
-      className='w-full  p-[3px] rounded-[20px] shadow-card'>
-<div className="max-w-sm bg-black-900 border border-gray-200 rounded-lg shadow dark:bg-white dark:border-gray-700">
-
-    <div className="p-5">
-      
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900">  {`>`} &nbsp; How will it work? </h5>
-      
-        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Livestream on the Codeling platform &nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-       
-    </div>
-</div>
+          <h1 className="font-bold text-xl text-white mb-4 relative z-50">
+            How will it work?
+          </h1>
+ 
+          <p className="font-normal text-base text-slate-500 mb-4 relative z-50">
+           Weekly livestreams hosted on Codeling
+          </p>
+          <a href="https://www.linkedin.com/company/codeling" target="_blank">
+          <button className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300">
+            Explore
+           
+          </button>
+          </a>
+          {/* Meaty part - Meteor effect */}
+          <Meteors number={20} />
+        </div>
       </div>
-      
+    </div>
     </Tilt>
    
     </motion.div>
@@ -382,24 +434,46 @@ export default function Home(){
   viewport={{ once: true }}
   className="flex flex-col"
 >
-    <Tilt className="xs:w-[250px] w-full">
-     
-      <div
+<Tilt className="xs:w-[250px] w-full">
+        <div className="">
+      <div className=" w-full relative max-w-xs">
+        <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-[#000319] rounded-full blur-3xl" />
+        <div className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+          <div className="h-5 w-5 rounded-full border flex items-center justify-center mb-4 border-gray-500">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="h-2 w-2 text-gray-300"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4.5 4.5l15 15m0 0V8.25m0 11.25H8.25"
+              />
+            </svg>
+          </div>
  
+          <h1 className="font-bold text-xl text-white mb-4 relative z-50">
+            Assignments
+          </h1>
  
-      className='w-full  p-[3px] rounded-[20px] shadow-card'>
-<div className="max-w-sm bg-black-900 border border-gray-200 rounded-lg shadow dark:bg-white dark:border-gray-700">
-
-    <div className="p-5">
+          <p className="font-normal text-base text-slate-500 mb-4 relative z-50">
+           Assignments will be given proceeding the lesson
+          </p>
+          <a href="https://www.linkedin.com/company/codeling" target="_blank">
+          <button className="border px-4 py-1 rounded-lg  border-gray-500 text-gray-300">
+            Explore
+           
+          </button>
+          </a>
       
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-white-900"> {`>`} &nbsp; Assignments </h5>
-      
-        <p className="mb-3 py-5 font-normal text-gray-300 dark:text-gray-400">Task given after each session&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-       
-    </div>
-</div>
+          <Meteors number={20} />
+        </div>
       </div>
-      
+    </div>
     </Tilt>
  </motion.div>
    
@@ -478,11 +552,11 @@ export default function Home(){
       
         <CardHeaderTwo className="flex-row">
         <CardDescription className="w-[10px] h-[10px]  mr-2 mt-2 rounded-full  bg-slate-500  "></CardDescription>
-        <CardDescription className=" text-slate-300 ">Due March 23, 2024 </CardDescription>
+        <CardDescription className=" text-slate-300 ">Go to assignments</CardDescription>
         </CardHeaderTwo>
         <CardHeaderTwo className="flex-row">
   
-       <CardDescription className=" text- mt-3 text-slate-400">Check out this weeks problem</CardDescription>
+       <CardDescription className=" text- mt-3 text-slate-400">Program enrollment starts now!</CardDescription>
        </CardHeaderTwo>
       <CardContent>
         <form>
@@ -509,16 +583,16 @@ export default function Home(){
     <SignedOut>
 
 
-    <Button className="mt-5" asChild>
-      
-      <Link href="/sign-up" className="mt-5 w-full "> Sign Up  </Link>
-    </Button>
+  
+      <div className="mt-5">
+      <Link href="/sign-up" className="my-5 w-full "> <MagicButton icon={<FaLocationArrow/>} position='right' title="Sign up" />  </Link>
+      </div>
 
 
 
 
     </SignedOut>
- 
+
   </>
   )
 }
