@@ -2,8 +2,7 @@
     "build": {
       "env": {
         "CI": "false"
-      },
-      "continueOnError": true
+      }
     }
   }
   
