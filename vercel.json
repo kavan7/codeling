@@ -1,8 +1,6 @@
 {
     "build": {
-      "env": {
-        "CI": "false"
-      }
+      "command": "npm run ignore-build-step"
     }
   }
   
