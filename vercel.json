@@ -1,6 +1,6 @@
 {
     "build": {
-      "commands": {
+      "buildCommands": {
         "build": "npm run build"
       },
       "env": {
