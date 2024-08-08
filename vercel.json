@@ -1,11 +1,11 @@
 {
     "build": {
-      "buildCommands": {
-        "build": "npm run build"
+      
+        "buildCommands": "npm run build"
       },
       "env": {
         "CI": "false"
       }
     }
-  }
+  
   
