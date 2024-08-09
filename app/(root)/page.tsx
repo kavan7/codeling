@@ -21,59 +21,12 @@ import { Meteors } from "@/components/ui/meteors";
 import MagicButton from "@/components/ui/MagicButton";
 
 export default function Home() {
-  const MOBILE_NAV_ITEMS = [
-    { id: 0, navTitle: "home" },
-    { id: 1, navTitle: "showreel" },
-    { id: 2, navTitle: "services" },
-    { id: 3, navTitle: "about" },
-    { id: 4, navTitle: "contact" }
-  ];
 
-  const yourStreamAccountId = process.env.NEXT_PUBLIC_ACCOUNT_ID as string;
-  const yourStreamName = 'Codeling';
-  const [isLive, setIsLive] = React.useState<boolean>(true);
-
-  const tokenGenerator = () => Director.getSubscriber({
-    streamName: yourStreamName,
-    streamAccountId: yourStreamAccountId
-  });
-
-  const [millicastView, setMillicastView] = React.useState<View | null>(null);
-  const videoRef = React.useRef<HTMLVideoElement>(null);
-
-  React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      const videoNode = videoRef.current;
-
-      const initializeMillicastView = async () => {
-        try {
-          const view = new View(yourStreamName, tokenGenerator);
-          //@ts-ignore
-          view.on('track', (event) => {
-            console.log('Stream has started.');
-            if (videoNode) {
-              videoNode.srcObject = event.streams[0];
-              videoNode.hidden = false;
-              videoNode.autoplay = true;
-            }
-          });
-          await view.connect();
-          setMillicastView(view);
-
-        } catch (error) {
-          setIsLive(false);
-          console.error('Connection failed:', error);
-        }
-      };
-
-      initializeMillicastView();
-    }
-  }, [yourStreamName, yourStreamAccountId, setIsLive]);
 
   const [text, setText] = React.useState("");
   const [fullText, setFullText] = React.useState("You're in.");
   const [index, setIndex] = React.useState(0);
-
+const [isLive, setisLive] = React.useState(false)
   const [texttwo, settexttwo] = React.useState("");
   const [fullTextTwo, setFullTextTwo] = React.useState("Welcome to Codeling!");
   const [indextwo, setIndextwo] = React.useState(0);
