@@ -1,5 +1,5 @@
 {
-  "build": "npm run build",
+  "buildCommand": "npm run build",
   "env": {
     "CI": "false"
   }
